@@ -9,8 +9,8 @@ WORKDIR /workspace
 ARG user
 ARG email
 
-RUN git config --global user.name "$(user)" && \
-git config --global user.email "$(email)"
+RUN git config --global user.name "$user" && \
+git config --global user.email "$email"
 
 COPY ./ /workspace/
 
